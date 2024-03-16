@@ -24,15 +24,15 @@ float MyUtils::MyMath::ToAngles(float radians)
 #pragma endregion
 
 #pragma region DistanceCalculation
-float MyUtils::MyMath::distance(float X1, float Y1, float X2, float Y2)
+float MyUtils::MyMath::distance(float X1, float Y1, float X2 = 0, float Y2 = 0)
 {
     return std::sqrtf(distanceSquared(X1, Y1, X2, Y2));
 }
-float MyUtils::MyMath::dist(float X1, float Y1, float X2, float Y2)
+float MyUtils::MyMath::dist(float X1, float Y1, float X2 = 0, float Y2 = 0)
 {
     return distance(X1, Y1, X2, Y2);
 }
-float MyUtils::MyMath::distanceSquared(float X1, float Y1, float X2, float Y2)
+float MyUtils::MyMath::distanceSquared(float X1, float Y1, float X2 = 0, float Y2 = 0)
 {
     float xDifference = X1 - X2;
     float yDifference = Y1 - Y2;
@@ -42,7 +42,7 @@ float MyUtils::MyMath::distanceSquared(float X1, float Y1, float X2, float Y2)
 
     return xDifferenceSquared + yDifferenceSquared;
 }
-float MyUtils::MyMath::distSq(float X1, float Y1, float X2, float Y2)
+float MyUtils::MyMath::distSq(float X1, float Y1, float X2 = 0, float Y2 = 0)
 {
     return distanceSquared(X1, Y1, X2, Y2);
 }

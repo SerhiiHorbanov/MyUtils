@@ -5,14 +5,19 @@ namespace MyUtils
     {
 #pragma region Constants
         const double Pi = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679;// :gdnormal:
+
+        const int COMPLETE_ANGLE = 360;
+        const int STRAIGH_ANGLE = 180;
+        const int RIGHT_ANGLE = 90;
+
         /// <summary>
         /// to convert angles to radians you can just multiply angles by ANGLES_TO_RADIANS_MULTIPLIER
         /// </summary>
-        const double ANGLES_TO_RADIANS_MULTIPLIER = 180 / Pi;
+        const double ANGLES_TO_RADIANS_MULTIPLIER = STRAIGH_ANGLE / Pi;
         /// <summary>
         /// to convert radians to angles you can just multiply radians by RADIANS_TO_ANGLES_MULTIPLIER
         /// </summary>
-        const float RADIANS_TO_ANGLES_MULTIPLIER = Pi / 180;
+        const double RADIANS_TO_ANGLES_MULTIPLIER = Pi / STRAIGH_ANGLE;
 #pragma endregion
 
 #pragma region AnglesAndRadiansConversion

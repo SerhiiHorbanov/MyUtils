@@ -128,9 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="MyMath.h" />
+    <ClInclude Include="MyVector2i.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyMath.cpp" />
+    <ClCompile Include="MyVector2i.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -87,3 +87,30 @@ inline float MyVector2i::distanceSquaredTo(int otherX, int otherY)
     return distanceSquared(x, y, otherX, otherY);
 }
 #pragma endregion
+
+#pragma region Operations
+inline MyVector2i operator+(MyVector2i firstVector, MyVector2i secondVector)
+{
+    return MyVector2i(firstVector.x + secondVector.x, firstVector.y + secondVector.y);
+}
+inline MyVector2i operator-(MyVector2i firstVector, MyVector2i secondVector)
+{
+    return MyVector2i(firstVector.x - secondVector.x, firstVector.y - secondVector.y);
+}
+inline MyVector2i operator*(MyVector2i firstVector, MyVector2i secondVector)
+{
+    return MyVector2i(firstVector.x * secondVector.x, firstVector.y * secondVector.y);
+}
+inline MyVector2i operator/(MyVector2i firstVector, MyVector2i secondVector)
+{
+    return MyVector2i(firstVector.x / secondVector.x, firstVector.y / secondVector.y);
+}
+inline MyVector2i operator==(MyVector2i firstVector, MyVector2i secondVector)
+{
+    return firstVector.x == secondVector.x && firstVector.y == secondVector.y;
+}
+inline MyVector2i operator!=(MyVector2i firstVector, MyVector2i secondVector)
+{
+    return firstVector.x != secondVector.x || firstVector.y != secondVector.y;
+}
+#pragma endregion

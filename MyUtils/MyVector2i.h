@@ -40,42 +40,6 @@ namespace MyUtils
             inline float distanceSquaredTo(MyVector2i otherVector);
             inline float distanceSquaredTo(int otherX, int otherY);
 #pragma endregion
-
-#pragma region Operations
-            inline MyVector2i operator+(MyVector2i otherVector)
-            {
-                return MyVector2i(x + otherVector.x, y + otherVector.y);
-            }
-            inline MyVector2i operator-(MyVector2i otherVector)
-            {
-                return MyVector2i(x - otherVector.x, y - otherVector.y);
-            }
-            inline MyVector2i operator*(MyVector2i otherVector)
-            {
-                return MyVector2i(x * otherVector.x, y * otherVector.y);
-            }
-            inline MyVector2i operator*(int multiplier)
-            {
-                return MyVector2i(x * multiplier, y * multiplier);
-            }
-            inline MyVector2i operator/(MyVector2i otherVector)
-            {
-                return MyVector2i(x / otherVector.x, y / otherVector.y);
-            }
-            inline MyVector2i operator/(int divider)
-            {
-                return MyVector2i(x / divider, y / divider);
-            }
-            inline bool operator==(MyVector2i otherVector)
-            {
-                return x == otherVector.x && y == otherVector.y;
-            }
-            inline bool operator!=(MyVector2i otherVector)
-            {
-                return !(x == otherVector.x && y == otherVector.y);
-            }
-#pragma endregion
-
         };
     }
 }

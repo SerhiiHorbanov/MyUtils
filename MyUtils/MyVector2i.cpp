@@ -3,6 +3,7 @@
 
 using namespace MyUtils::MyMath;
 
+#pragma region FactoryMethods
 inline MyVector2i MyVector2i::CalculateVectorByAngleAndLength(float angle, float length)
 {
     float angleCos = cos(angle);
@@ -11,7 +12,9 @@ inline MyVector2i MyVector2i::CalculateVectorByAngleAndLength(float angle, float
     int y = angleSin * length;
     return MyVector2i(x, y);
 }
+#pragma endregion
 
+#pragma region Length
 inline float MyVector2i::getLength()
 {
     return distance(x, y);
@@ -61,7 +64,9 @@ inline float MyVector2i::magnitudeSquared()
 {
     return distanceSquared(x, y);
 }
+#pragma endregion
 
+#pragma region DistanceCalculation
 inline float MyVector2i::distanceTo(MyVector2i otherVector)
 {
     return distance(x, y, otherVector.x, otherVector.y);
@@ -81,3 +86,4 @@ inline float MyVector2i::distanceSquaredTo(int otherX, int otherY)
 {
     return distanceSquared(x, y, otherX, otherY);
 }
+#pragma endregion

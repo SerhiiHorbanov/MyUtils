@@ -1,3 +1,4 @@
+#include "MyMath.h"
 #include "MyVector2i.h"
 #include <cmath>
 
@@ -30,16 +31,6 @@ inline float MyVector2i::len()
     return getLength();
 }
 
-inline float MyVector2i::getMagnitude()
-{
-    return getLength();
-}
-
-inline float MyVector2i::magnitude()
-{
-    return getLength();
-}
-
 inline float MyVector2i::getLengthSquared()
 {
     return distanceSquared(x, y);
@@ -51,16 +42,6 @@ inline float MyVector2i::lengthSquared()
 }
 
 inline float MyVector2i::lenSquared()
-{
-    return distanceSquared(x, y);
-}
-
-inline float MyVector2i::getMagnitudeSquared()
-{
-    return distanceSquared(x, y);
-}
-
-inline float MyVector2i::magnitudeSquared() 
 {
     return distanceSquared(x, y);
 }

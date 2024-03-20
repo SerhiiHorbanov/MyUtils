@@ -1,5 +1,4 @@
 #pragma once
-#include "MyMath.h"
 
 namespace MyUtils
 {
@@ -25,13 +24,11 @@ namespace MyUtils
             inline float getLength();
             inline float length();
             inline float len();
-            inline float getMagnitude();
-            inline float magnitude();
             inline float getLengthSquared();
             inline float lengthSquared();
             inline float lenSquared();
-            inline float getMagnitudeSquared();
-            inline float magnitudeSquared();
+
+            inline void setLength(float newLength);
 #pragma endregion
 
 #pragma region DistanceCalculation

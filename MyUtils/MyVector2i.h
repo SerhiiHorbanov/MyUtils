@@ -19,7 +19,6 @@ namespace MyUtils
             static MyVector2i CalculateVectorByAngleAndLength(float angle, float length = 0);
 #pragma endregion
 
-
 #pragma region Length
             inline float getLength();
             inline float length();
@@ -29,6 +28,13 @@ namespace MyUtils
             inline float lenSquared();
 
             inline void setLength(float newLength);
+            void normal();
+            inline void normalize();
+#pragma endregion
+
+#pragma region VectorCalculations
+            static inline float dotProduct(MyVector2i firstVector, MyVector2i secondVector);
+            static inline float dot(MyVector2i firstVector, MyVector2i secondVector);
 #pragma endregion
 
 #pragma region DistanceCalculation

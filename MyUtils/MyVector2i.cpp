@@ -69,6 +69,15 @@ inline float MyVector2i::distanceSquaredTo(int otherX, int otherY)
 }
 #pragma endregion
 
+inline float MyUtils::MyMath::MyVector2i::dotProduct(MyVector2i firstVector, MyVector2i secondVector)
+{
+    return (firstVector.x * secondVector.x) + (firstVector.y * secondVector.y);
+}
+inline float MyUtils::MyMath::MyVector2i::dot(MyVector2i firstVector, MyVector2i secondVector)
+{
+    return dotProduct(firstVector, secondVector);
+}
+
 #pragma region Operations
 inline MyVector2i operator+(MyVector2i firstVector, MyVector2i secondVector)
 {

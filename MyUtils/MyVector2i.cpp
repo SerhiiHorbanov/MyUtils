@@ -46,6 +46,17 @@ inline float MyVector2i::lenSquared()
 {
     return distanceSquared(x, y);
 }
+inline void MyUtils::MyMath::MyVector2i::setLength(float newLength)
+{
+    float length = getLength();
+    x = x / length * newLength;
+    y = y / length * newLength;
+}
+MyVector2f MyUtils::MyMath::MyVector2i::normal()
+{
+    float length = getLength();
+    return MyVector2f(x / length, y / length);
+}
 #pragma endregion
 
 #pragma region VectorCalculations

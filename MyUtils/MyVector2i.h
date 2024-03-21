@@ -30,8 +30,7 @@ namespace MyUtils
             inline float lenSquared();
 
             inline void setLength(float newLength);
-            void normal();
-            inline void normalize();
+            MyVector2f normal();
 #pragma endregion
 
 #pragma region VectorCalculations

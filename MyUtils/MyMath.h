@@ -7,6 +7,8 @@ namespace MyUtils
     {
 #pragma region Constants
         const double Pi = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679;// :gdnormal:
+        const double TwoPi = Pi * 2;
+        const double Tao = TwoPi;
 
         const int COMPLETE_ANGLE = 360;
         const int STRAIGH_ANGLE = 180;

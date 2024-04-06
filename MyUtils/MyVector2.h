@@ -96,9 +96,9 @@ namespace MyUtils
         template <typename T>
         bool operator !=(const MyVector2<T>& left, const MyVector2<T>& right);
 
-        typedef MyVector2<int>          Vector2i;
-        typedef MyVector2<unsigned int> Vector2u;
-        typedef MyVector2<double>       Vector2d;
-        typedef MyVector2<float>        Vector2f;
+        typedef MyVector2<int>          MyVector2i;
+        typedef MyVector2<unsigned int> MyVector2u;
+        typedef MyVector2<double>       MyVector2d;
+        typedef MyVector2<float>        MyVector2f;
     }
 }

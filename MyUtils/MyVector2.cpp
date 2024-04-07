@@ -149,6 +149,34 @@ namespace MyUtils
             return left;
         }
 
+        template<typename T>
+        MyVector2<T> operator*(const MyVector2<T>& left, const MyVector2<T>& right)
+        {
+            return MyVector2<T>(left.x * right.x, left.y * right.y);
+        }
+
+        template<typename T>
+        MyVector2<T> operator*=(MyVector2<T>& left, const MyVector2<T>& right)
+        {
+            left.x *= right.x;
+            left.y *= right.y;
+            return left;
+        }
+
+        template<typename T>
+        MyVector2<T> operator/(const MyVector2<T>& left, const MyVector2<T>& right)
+        {
+            return MyVector2<T>(left.x / right.x, left.y / right.y);
+        }
+
+        template<typename T>
+        MyVector2<T>& operator/=(MyVector2<T>& left, const MyVector2<T>& right)
+        {
+            left.x /= right.x;
+            left.y /= right.y;
+            return left;
+        }
+
         template <typename T>
         inline bool operator ==(const MyVector2<T>& left, const MyVector2<T>& right)
         {

@@ -212,7 +212,7 @@ namespace MyUtils
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInBack
         /// </summary>
-        float easeInBack(const float x, const float c1 = 1.70158)
+        float easeInBack(const float x, const float c1)
         {
             const const float c3 = c1 + 1;
 
@@ -221,7 +221,7 @@ namespace MyUtils
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeOutBack
         /// </summary>
-        float easeOutBack(const float x, const float c1 = 1.70158)
+        float easeOutBack(const float x, const float c1)
         {
             const const float c3 = c1 + 1;
 
@@ -230,7 +230,7 @@ namespace MyUtils
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInOutBack
         /// </summary>
-        float easeInOutBack(const float x, const float c1 = 1.70158)
+        float easeInOutBack(const float x, const float c1)
         {
             const float c2 = c1 * 1.525;
 

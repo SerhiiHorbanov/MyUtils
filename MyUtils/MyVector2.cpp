@@ -42,6 +42,13 @@ namespace MyUtils
         }
 
         template<typename T>
+        template<typename U>
+        inline float MyVector2<T>::dot(const MyVector2<U>& right)
+        {
+            return dotProduct(right);
+        }
+
+        template<typename T>
         inline float MyVector2<T>::getLength()
         {
             return distance(static_cast<float>(x), static_cast<float>(y));
@@ -187,6 +194,16 @@ namespace MyUtils
         inline bool operator !=(const MyVector2<T>& left, const MyVector2<T>& right)
         {
             return (left.x != right.x) || (left.y != right.y);
+        }
+        template<typename T, typename U>
+        float dotProduct(const MyVector2<T>& left, const MyVector2<U>& right)
+        {
+            return (left.x * right.x) + (left.y * right.y);
+        }
+        template<typename T, typename U>
+        float dot(const MyVector2<T>& left, const MyVector2<U>& right)
+        {
+            return dotProduct(left, right);
         }
     }
 }

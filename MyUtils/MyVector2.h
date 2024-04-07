@@ -43,6 +43,9 @@ namespace MyUtils
             inline float getLengthSquared();
             inline float lengthSquared();
             inline float lenSquared();
+
+            template <typename U>
+            inline float dot(const MyVector2<U>& right);
         };
 
         template <typename T>
@@ -95,6 +98,13 @@ namespace MyUtils
 
         template <typename T>
         bool operator !=(const MyVector2<T>& left, const MyVector2<T>& right);
+
+
+        template <typename T, typename U>
+        inline float dotProduct(const MyVector2<T>& left, const MyVector2<U>& right);
+
+        template <typename T, typename U>
+        inline float dot(const MyVector2<T>& left, const MyVector2<U>& right);
 
         typedef MyVector2<int>          MyVector2i;
         typedef MyVector2<unsigned int> MyVector2u;

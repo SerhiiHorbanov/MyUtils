@@ -5,9 +5,9 @@ namespace MyUtils
 {
     namespace MyMath
     {
-        template <typename T>
-        template <typename U>
-        inline MyVector2<T>::MyVector2(const MyVector2<U>& vector) :
+        template<typename T>
+        template<typename U>
+        MyVector2<T>::MyVector2(const MyVector2<U>& vector) :
             x(static_cast<T>(vector.x)),
             y(static_cast<T>(vector.y))
         {

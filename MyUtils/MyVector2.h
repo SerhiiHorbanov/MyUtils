@@ -24,7 +24,7 @@ namespace MyUtils
             {}
 
             template <typename U>
-            MyVector2(const MyVector2<U>& vector);
+            explicit MyVector2(const MyVector2<U>& vector);
 
             template <typename U>
             float distanceTo(const MyVector2<U>& vector);

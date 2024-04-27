@@ -6,41 +6,53 @@ namespace MyUtils
     namespace MyMath
     {
 #pragma region Constants
-        const double Pi = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679;// :gdnormal:
-        const double TwoPi = Pi * 2;
-        const double Tao = TwoPi;
+        constexpr double dPi = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679;// :gdnormal:
+        constexpr double dTwoPi = dPi * 2;
+        constexpr double dTao = dTwoPi;
 
-        const int COMPLETE_ANGLE = 360;
-        const int STRAIGH_ANGLE = 180;
-        const int RIGHT_ANGLE = 90;
+        constexpr float Pi = dPi;
+        constexpr float TwoPi = dPi * 2;
+        constexpr float Tao = dTwoPi;
+
+        constexpr int COMPLETE_ANGLE = 360;
+        constexpr int STRAIGH_ANGLE = 180;
+        constexpr int RIGHT_ANGLE = 90;
 
         /// <summary>
         /// to convert angles to radians you can just multiply angles by ANGLES_TO_RADIANS_MULTIPLIER
         /// </summary>
-        const double ANGLES_TO_RADIANS_MULTIPLIER = STRAIGH_ANGLE / Pi;
+        constexpr float DEGREES_TO_RADIANS_MULTIPLIER = COMPLETE_ANGLE / dTwoPi;
         /// <summary>
         /// to convert radians to angles you can just multiply radians by RADIANS_TO_ANGLES_MULTIPLIER
         /// </summary>
-        const double RADIANS_TO_ANGLES_MULTIPLIER = Pi / STRAIGH_ANGLE;
+        constexpr float RADIANS_TO_DEGREES_MULTIPLIER = dTwoPi / COMPLETE_ANGLE;
+        /// <summary>
+        /// to convert angles to radians you can just multiply angles by ANGLES_TO_RADIANS_MULTIPLIER
+        /// </summary>
+        constexpr double dDEGREES_TO_RADIANS_MULTIPLIER = COMPLETE_ANGLE / dTwoPi;
+        /// <summary>
+        /// to convert radians to angles you can just multiply radians by RADIANS_TO_ANGLES_MULTIPLIER
+        /// </summary>
+        constexpr double dRADIANS_TO_DEGREES_MULTIPLIER = dTwoPi / COMPLETE_ANGLE;
 #pragma endregion
 
-#pragma region AnglesAndRadiansConversion
-        inline float fromAnglesToRadians(float angles)
+#pragma region DegreesAndRadiansConversion
+        inline float fromDegreesToRadians(float degrees)
         {
-            return angles * ANGLES_TO_RADIANS_MULTIPLIER;
+            return degrees * DEGREES_TO_RADIANS_MULTIPLIER;
         }
-        inline float ToRadians(float angles)
+        inline float ToRadians(float degrees)
         {
-            fromAnglesToRadians(angles);
+            fromDegreesToRadians(degrees);
         }
 
-        inline float fromRadiansToAngles(float radians)
+        inline float fromRadiansToDegrees(float radians)
         {
-            return radians * RADIANS_TO_ANGLES_MULTIPLIER;
+            return radians * RADIANS_TO_DEGREES_MULTIPLIER;
         }
-        inline float ToAngles(float radians)
+        inline float ToDegrees(float radians)
         {
-            fromRadiansToAngles(radians);
+            fromRadiansToDegrees(radians);
         }
 #pragma endregion
 

@@ -134,6 +134,7 @@
     <ClInclude Include="MyStateMachine.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Easings.cpp" />
     <ClCompile Include="MyMath.cpp" />
     <ClCompile Include="MyVector2.cpp" />
   </ItemGroup>

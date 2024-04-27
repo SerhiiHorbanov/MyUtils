@@ -12,7 +12,7 @@ namespace MyUtils
         }
 
         template<typename T>
-        inline MyVector2<T> MyVector2<T>::PolarToCartesian(float length, float angleRadians)
+        static MyVector2<T> MyVector2<T>::PolarToCartesian(float length, float angleRadians)
         {
             float x = cos(angleRadians) * length;
             float y = sin(angleRadians) * length;

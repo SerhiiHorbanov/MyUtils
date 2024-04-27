@@ -10,5 +10,13 @@ namespace MyUtils
         {
             return "MyVector2(" + std::to_string(x) + ", " + std::to_string(y) + ")";
         }
+
+        template<typename T>
+        inline MyVector2<T> MyVector2<T>::PolarToCartesian(float length, float angleRadians)
+        {
+            float x = cos(angleRadians) * length;
+            float y = sin(angleRadians) * length;
+            return MyVector2<T>(x, y);
+        }
     }
 }

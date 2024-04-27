@@ -33,6 +33,15 @@ namespace MyUtils
             {
             }
 
+            /// <summary>
+            /// Calculates MyVector2 from it's angle and length
+            /// </summary>
+            /// <returns>Vector with coordinates 
+            ///x = cos(angle) * length,
+            ///y = sin(angle) * length
+            ///</returns>
+            static MyVector2<T> PolarToCartesian(float length, float angleRadians);
+
             template <typename U>
             inline float distanceTo(const MyVector2<U>& otherVector)
             {

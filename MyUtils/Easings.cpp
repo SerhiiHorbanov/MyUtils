@@ -22,7 +22,7 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeInSine
         /// </summary>
         /// <returns>1 - cos((x * Pi) / 2)</returns>
-        float easeInSine(const float x)
+        float EaseInSine(const float x)
         {
             return 1 - cos((x * Pi) / 2);
         }
@@ -30,14 +30,14 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeOutSine
         /// </summary>
         /// <returns>sin((x * Pi) / 2)</returns>
-        float easeOutSine(const float x)
+        float EaseOutSine(const float x)
         {
             return sin((x * Pi) / 2);
         }
         /// <summary>
         /// visual reference: https://easings.net/#easeInOutSine
         /// </summary>
-        float easeInOutSine(const float x)
+        float EaseInOutSine(const float x)
         {
             return -(cos(Pi * x) - 1) / 2;
         }
@@ -45,7 +45,7 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeInQuad
         /// </summary>
         /// <returns>x * x</returns>
-        float easeInQuad(const float x)
+        float EaseInQuad(const float x)
         {
             return x * x;
         }
@@ -53,14 +53,14 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeOutQuad
         /// </summary>
         /// <returns>1 - ((1 - x) * (1 - x))</returns>
-        float easeOutQuad(const float x)
+        float EaseOutQuad(const float x)
         {
             return 1 - ((1 - x) * (1 - x));
         }
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInOutQuad
         /// </summary>
-        float easeInOutQuad(const float x)
+        float EaseInOutQuad(const float x)
         {
             return x < 0.5 ? 2 * x * x : 1 - pow(-2 * x + 2, 2) / 2;
         }
@@ -68,7 +68,7 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeInCubic
         /// </summary>
         /// <returns>x * x * x</returns>
-        float easeInCubic(const float x)
+        float EaseInCubic(const float x)
         {
             return x * x * x;
         }
@@ -76,14 +76,14 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeOutCubic
         /// </summary>
         /// <returns>1 - pow(1 - x, 3)</returns>
-        float easeOutCubic(const float x)
+        float EaseOutCubic(const float x)
         {
             return 1 - pow(1 - x, 3);
         }
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInOutCubic
         /// </summary>
-        float easeInOutCubic(const float x)
+        float EaseInOutCubic(const float x)
         {
             return x < 0.5 ? 4 * x * x * x : 1 - pow(-2 * x + 2, 3) / 2;
         }
@@ -91,7 +91,7 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeInQuart
         /// </summary>
         /// <returns>x * x * x * x</returns>
-        float easeInQuart(const float x)
+        float EaseInQuart(const float x)
         {
             return x * x * x * x;
         }
@@ -99,14 +99,14 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeOutQuart
         /// </summary>
         /// <returns>1 - pow(1 - x, 4)</returns>
-        float easeOutQuart(const float x)
+        float EaseOutQuart(const float x)
         {
             return 1 - pow(1 - x, 4);
         }
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInOutQuart
         /// </summary>
-        float easeInOutQuart(const float x)
+        float EaseInOutQuart(const float x)
         {
             return x < 0.5 ? 8 * x * x * x * x : 1 - pow(-2 * x + 2, 4) / 2;
         }
@@ -114,7 +114,7 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeInQuint
         /// </summary>
         /// <returns>x * x * x * x * x</returns>
-        float easeInQuint(const float x)
+        float EaseInQuint(const float x)
         {
             return x * x * x * x * x;
         }
@@ -122,14 +122,14 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeOutQuint
         /// </summary>
         /// <returns>1 - pow(1 - x, 5)</returns>
-        float easeOutQuint(const float x)
+        float EaseOutQuint(const float x)
         {
             return 1 - pow(1 - x, 5);
         }
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInOutQuint
         /// </summary>
-        float easeInOutQuint(const float x)
+        float EaseInOutQuint(const float x)
         {
             return x < 0.5 ? 16 * x * x * x * x * x : 1 - pow(-2 * x + 2, 5) / 2;
         }
@@ -137,7 +137,7 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeInExpo
         /// </summary>
         /// <returns>x == 0 ? 0 : pow(2, 10 * x - 10)</returns>
-        float easeInExpo(const float x)
+        float EaseInExpo(const float x)
         {
             return x == 0 ? 0 : pow(2, 10 * x - 10);
         }
@@ -145,14 +145,14 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeOutExpo
         /// </summary>
         /// <returns>x == 1 ? 1 : 1 - pow(2, -10 * x)</returns>
-        float easeOutExpo(const float x)
+        float EaseOutExpo(const float x)
         {
             return x == 1 ? 1 : 1 - pow(2, -10 * x);
         }
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInOutExpo
         /// </summary>
-        float easeInOutExpo(const float x)
+        float EaseInOutExpo(const float x)
         {
             return x == 0
                 ? 0
@@ -165,7 +165,7 @@ namespace MyUtils
         /// does the same thig what easeInQuad or easeInCubic or easeInQuart or easeInQuint do but with any power of the function
         /// </summary>
         /// <returns>pow(x, power)</returns>
-        float easeInPow(const float x, const float power)
+        float EaseInPow(const float x, const float power)
         {
             return pow(x, power);
         }
@@ -173,14 +173,14 @@ namespace MyUtils
         /// does the same thig what easeOutQuad or easeOutCubic or easeOutQuart or easeOutQuint do but with any power of the function
         /// </summary>
         /// <returns>1 - pow(1 - x, power)</returns>
-        float easeOutPow(const float x, const float power)
+        float EaseOutPow(const float x, const float power)
         {
             return 1 - pow(1 - x, power);
         }
         /// <summary>
         /// a complex easing function. does the same thig what easeInOutQuad or easeInOutCubic or easeInOutQuart or easeInOutQuint do but with any power of the function
         /// </summary>
-        float easeInOutPow(const float x, const float power)
+        float EaseInOutPow(const float x, const float power)
         {
             return x < 0.5 ? pow(2, power) * pow(x, power) : 1 - pow(-2 * x + 2, power) / 2;
         }
@@ -188,7 +188,7 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeInCirc
         /// </summary>
         /// <returns>1 - sqrt(1 - pow(x, 2))</returns>
-        float easeInCirc(const float x)
+        float EaseInCirc(const float x)
         {
             return 1 - sqrt(1 - pow(x, 2));
         }
@@ -196,14 +196,14 @@ namespace MyUtils
         /// visual reference: https://easings.net/#easeOutCirc
         /// </summary>
         /// <returns>sqrt(1 - pow(x - 1, 2))</returns>
-        float easeOutCirc(const float x)
+        float EaseOutCirc(const float x)
         {
             return sqrt(1 - pow(x - 1, 2));
         }
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInOutCirc
         /// </summary>
-        float easeInOutCirc(const float x)
+        float EaseInOutCirc(const float x)
         {
             return x < 0.5
                 ? (1 - sqrt(1 - pow(2 * x, 2))) / 2
@@ -212,7 +212,7 @@ namespace MyUtils
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInBack
         /// </summary>
-        float easeInBack(const float x, const float c1)
+        float EaseInBack(const float x, const float c1)
         {
             const const float c3 = c1 + 1;
 
@@ -221,7 +221,7 @@ namespace MyUtils
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeOutBack
         /// </summary>
-        float easeOutBack(const float x, const float c1)
+        float EaseOutBack(const float x, const float c1)
         {
             const const float c3 = c1 + 1;
 
@@ -230,7 +230,7 @@ namespace MyUtils
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInOutBack
         /// </summary>
-        float easeInOutBack(const float x, const float c1)
+        float EaseInOutBack(const float x, const float c1)
         {
             const float c2 = c1 * 1.525;
 
@@ -241,7 +241,7 @@ namespace MyUtils
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInElastic
         /// </summary>
-        float easeInElastic(const float x)
+        float EaseInElastic(const float x)
         {
             const float c4 = (2 * Pi) / 3;
 
@@ -254,7 +254,7 @@ namespace MyUtils
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeOutElastic
         /// </summary>
-        float easeOutElastic(const float x)
+        float EaseOutElastic(const float x)
         {
             const float c4 = (2 * Pi) / 3;
 
@@ -267,7 +267,7 @@ namespace MyUtils
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInOutElastic
         /// </summary>
-        float easeInOutElastic(const float x)
+        float EaseInOutElastic(const float x)
         {
             const float c5 = (2 * Pi) / 4.5;
 
@@ -282,14 +282,14 @@ namespace MyUtils
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInBounce
         /// </summary>
-        float easeInBounce(const float x)
+        float EaseInBounce(const float x)
         {
-            return 1 - easeOutBounce(1 - x);
+            return 1 - EaseOutBounce(1 - x);
         }
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeOutBounce
         /// </summary>
-        float easeOutBounce(const float x)
+        float EaseOutBounce(const float x)
         {
             const float n1 = 7.5625;
             const float d1 = 2.75;
@@ -314,11 +314,11 @@ namespace MyUtils
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInOutBounce
         /// </summary>
-        float easeInOutBounce(const float x)
+        float EaseInOutBounce(const float x)
         {
             return x < 0.5
-                ? (1 - easeOutBounce(1 - 2 * x)) / 2
-                : (1 + easeOutBounce(2 * x - 1)) / 2;
+                ? (1 - EaseOutBounce(1 - 2 * x)) / 2
+                : (1 + EaseOutBounce(2 * x - 1)) / 2;
         }
     }
 }

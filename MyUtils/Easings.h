@@ -6,48 +6,48 @@ namespace MyUtils
         float Linear(const const float x, const const float start, const const float end);
         float LinearFromZeroToOne(const float x, const float start, const float end);
 
-        float easeInSine(const float x);
-        float easeOutSine(const float x);
-        float easeInOutSine(const float x);
+        float EaseInSine(const float x);
+        float EaseOutSine(const float x);
+        float EaseInOutSine(const float x);
 
-        float easeInQuad(const float x);
-        float easeOutQuad(const float x);
-        float easeInOutQuad(const float x);
+        float EaseInQuad(const float x);
+        float EaseOutQuad(const float x);
+        float EaseInOutQuad(const float x);
 
-        float easeInCubic(const float x);
-        float easeOutCubic(const float x);
-        float easeInOutCubic(const float x);
+        float EaseInCubic(const float x);
+        float EaseOutCubic(const float x);
+        float EaseInOutCubic(const float x);
 
-        float easeInQuart(const float x);
-        float easeOutQuart(const float x);
-        float easeInOutQuart(const float x);
+        float EaseInQuart(const float x);
+        float EaseOutQuart(const float x);
+        float EaseInOutQuart(const float x);
 
-        float easeInQuint(const float x);
-        float easeOutQuint(const float x);
-        float easeInOutQuint(const float x);
+        float EaseInQuint(const float x);
+        float EaseOutQuint(const float x);
+        float EaseInOutQuint(const float x);
 
-        float easeInExpo(const float x);
-        float easeOutExpo(const float x);
-        float easeInOutExpo(const float x);
+        float EaseInExpo(const float x);
+        float EaseOutExpo(const float x);
+        float EaseInOutExpo(const float x);
 
-        float easeInPow(const float x, const float pow);
-        float easeOutPow(const float x, const float pow);
-        float easeInOutPow(const float x, const float pow);
+        float EaseInPow(const float x, const float pow);
+        float EaseOutPow(const float x, const float pow);
+        float EaseInOutPow(const float x, const float pow);
 
-        float easeInCirc(const float x);
-        float easeOutCirc(const float x);
-        float easeInOutCirc(const float x);
+        float EaseInCirc(const float x);
+        float EaseOutCirc(const float x);
+        float EaseInOutCirc(const float x);
 
-        float easeInBack(const float x, const float c1 = 1.70158);
-        float easeOutBack(const float x, const float c1 = 1.70158);
-        float easeInOutBack(const float x, const float c1 = 1.70158);
+        float EaseInBack(const float x, const float c1 = 1.70158);
+        float EaseOutBack(const float x, const float c1 = 1.70158);
+        float EaseInOutBack(const float x, const float c1 = 1.70158);
 
-        float easeInElastic(const float x);
-        float easeOutElastic(const float x);
-        float easeInOutElastic(const float x);
+        float EaseInElastic(const float x);
+        float EaseOutElastic(const float x);
+        float EaseInOutElastic(const float x);
 
-        float easeInBounce(const float x);
-        float easeOutBounce(const float x);
-        float easeInOutBounce(const float x);
+        float EaseInBounce(const float x);
+        float EaseOutBounce(const float x);
+        float EaseInOutBounce(const float x);
     }
 }

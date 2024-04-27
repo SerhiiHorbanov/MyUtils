@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 namespace MyUtils
 {
@@ -22,6 +23,8 @@ namespace MyUtils
                 x(X),
                 y(Y)
             {}
+
+            std::string ToString();
 
             template <typename U>
             explicit inline MyVector2(const MyVector2<U>& vector) :

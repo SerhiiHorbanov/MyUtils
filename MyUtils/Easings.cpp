@@ -18,6 +18,7 @@ namespace MyUtils
         {
             return (x - start) / (end - start);
         }
+
         /// <summary>
         /// visual reference: https://easings.net/#easeInSine
         /// </summary>
@@ -41,6 +42,7 @@ namespace MyUtils
         {
             return -(cos(Pi * x) - 1) / 2;
         }
+
         /// <summary>
         /// visual reference: https://easings.net/#easeInQuad
         /// </summary>
@@ -64,6 +66,7 @@ namespace MyUtils
         {
             return x < 0.5 ? 2 * x * x : 1 - pow(-2 * x + 2, 2) / 2;
         }
+
         /// <summary>
         /// visual reference: https://easings.net/#easeInCubic
         /// </summary>
@@ -87,6 +90,7 @@ namespace MyUtils
         {
             return x < 0.5 ? 4 * x * x * x : 1 - pow(-2 * x + 2, 3) / 2;
         }
+
         /// <summary>
         /// visual reference: https://easings.net/#easeInQuart
         /// </summary>
@@ -110,6 +114,7 @@ namespace MyUtils
         {
             return x < 0.5 ? 8 * x * x * x * x : 1 - pow(-2 * x + 2, 4) / 2;
         }
+
         /// <summary>
         /// visual reference: https://easings.net/#easeInQuint
         /// </summary>
@@ -133,6 +138,7 @@ namespace MyUtils
         {
             return x < 0.5 ? 16 * x * x * x * x * x : 1 - pow(-2 * x + 2, 5) / 2;
         }
+
         /// <summary>
         /// visual reference: https://easings.net/#easeInExpo
         /// </summary>
@@ -161,6 +167,7 @@ namespace MyUtils
                 : x < 0.5 ? pow(2, 20 * x - 10) / 2
                 : (2 - pow(2, -20 * x + 10)) / 2;
         }
+
         /// <summary>
         /// does the same thig what easeInQuad or easeInCubic or easeInQuart or easeInQuint do but with any power of the function
         /// </summary>
@@ -184,6 +191,7 @@ namespace MyUtils
         {
             return x < 0.5 ? pow(2, power) * pow(x, power) : 1 - pow(-2 * x + 2, power) / 2;
         }
+
         /// <summary>
         /// visual reference: https://easings.net/#easeInCirc
         /// </summary>
@@ -208,6 +216,28 @@ namespace MyUtils
             return x < 0.5
                 ? (1 - sqrt(1 - pow(2 * x, 2))) / 2
                 : (sqrt(1 - pow(-2 * x + 2, 2)) + 1) / 2;
+        }
+
+        /// <summary>
+        /// a complex easing function. reference: https://easings.net/#easeInBack
+        /// </summary>
+        float EaseInBack(const float x)
+        {
+            return EaseInBack(x, 1.70158);
+        }
+        /// <summary>
+        /// a complex easing function. reference: https://easings.net/#easeOutBack
+        /// </summary>
+        float EaseOutBack(const float x)
+        {
+            return EaseOutBack(x, 1.70158);
+        }
+        /// <summary>
+        /// a complex easing function. reference: https://easings.net/#easeInOutBack
+        /// </summary>
+        float EaseInOutBack(const float x)
+        {
+            return EaseInOutBack(x, 1.70158);
         }
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInBack
@@ -238,6 +268,7 @@ namespace MyUtils
                 ? (pow(2 * x, 2) * ((c2 + 1) * 2 * x - c2)) / 2
                 : (pow(2 * x - 2, 2) * ((c2 + 1) * (x * 2 - 2) + c2) + 2) / 2;
         }
+
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInElastic
         /// </summary>
@@ -279,6 +310,7 @@ namespace MyUtils
                 ? -(pow(2, 20 * x - 10) * sin((20 * x - 11.125) * c5)) / 2
                 : (pow(2, -20 * x + 10) * sin((20 * x - 11.125) * c5)) / 2 + 1;
         }
+
         /// <summary>
         /// a complex easing function. reference: https://easings.net/#easeInBounce
         /// </summary>
@@ -319,6 +351,31 @@ namespace MyUtils
             return x < 0.5
                 ? (1 - EaseOutBounce(1 - 2 * x)) / 2
                 : (1 + EaseOutBounce(2 * x - 1)) / 2;
+        }
+
+        std::string GetEasingFunctionNameByPointer(float(* const function)(float), const std::string defaultName)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                if (function == EasingFunctionsPointersWithOneParam[i])
+                {
+                    return EasingFunctionsWithOneParamNames[i];
+                }
+            }
+            return defaultName;
+
+        }
+
+        float (*GetEasingFunctionByName(const std::string name, float (*defaultFunction)(float)))(float)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                if (name == EasingFunctionsWithOneParamNames[i])
+                {
+                    return EasingFunctionsPointersWithOneParam[i];
+                }
+            }
+            return defaultFunction;
         }
     }
 }

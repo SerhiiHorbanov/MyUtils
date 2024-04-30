@@ -1,10 +1,12 @@
 #pragma once
+#include <string>
+
 namespace MyUtils
 {
     namespace MyEasings
     {
-        float Linear(const const float x, const const float start, const const float end);
-        float LinearFromZeroToOne(const float x, const float start, const float end);
+        float Linear(const float x, const float start = 0, const float end = 1);
+        float LinearFromZeroToOne(const float x, const float start = 0, const float end = 1);
 
         float EaseInSine(const float x);
         float EaseOutSine(const float x);
@@ -38,9 +40,12 @@ namespace MyUtils
         float EaseOutCirc(const float x);
         float EaseInOutCirc(const float x);
 
-        float EaseInBack(const float x, const float c1 = 1.70158);
-        float EaseOutBack(const float x, const float c1 = 1.70158);
-        float EaseInOutBack(const float x, const float c1 = 1.70158);
+        float EaseInBack(const float x);
+        float EaseOutBack(const float x);
+        float EaseInOutBack(const float x);
+        float EaseInBack(const float x, const float c1);
+        float EaseOutBack(const float x, const float c1);
+        float EaseInOutBack(const float x, const float c1);
 
         float EaseInElastic(const float x);
         float EaseOutElastic(const float x);
@@ -49,5 +54,37 @@ namespace MyUtils
         float EaseInBounce(const float x);
         float EaseOutBounce(const float x);
         float EaseInOutBounce(const float x);
+
+        float (*const EasingFunctionsPointersWithOneParam[30])(float) =
+        {
+            EaseInSine, EaseOutSine, EaseInOutSine,
+            EaseInQuad, EaseOutQuad, EaseInOutQuad,
+            EaseInCubic, EaseOutCubic, EaseInOutCubic,
+            EaseInQuart, EaseOutQuart, EaseInOutQuart,
+            EaseInQuint, EaseOutQuint, EaseInOutQuint,
+            EaseInExpo, EaseOutExpo, EaseInOutExpo,
+            EaseInCirc, EaseOutCirc, EaseInOutCirc,
+            EaseInBack, EaseOutBack, EaseInOutBack,
+            EaseInElastic, EaseOutElastic, EaseInOutElastic,
+            EaseInBounce, EaseOutBounce, EaseInOutBounce,
+        };
+
+        const std::string EasingFunctionsWithOneParamNames[30] =
+        {
+            "EaseInSine", "EaseOutSine", "EaseInOutSine",
+            "EaseInQuad", "EaseOutQuad", "EaseInOutQuad",
+            "EaseInCubic", "EaseOutCubic", "EaseInOutCubic",
+            "EaseInQuart", "EaseOutQuart", "EaseInOutQuart",
+            "EaseInQuint", "EaseOutQuint", "EaseInOutQuint",
+            "EaseInExpo", "EaseOutExpo", "EaseInOutExpo",
+            "EaseInCirc", "EaseOutCirc", "EaseInOutCirc",
+            "EaseInBack", "EaseOutBack", "EaseInOutBack",
+            "EaseInElastic", "EaseOutElastic", "EaseInOutElastic",
+            "EaseInBounce", "EaseOutBounce", "EaseInOutBounce",
+        };
+
+        std::string GetEasingFunctionNameByPointer(float (*const function)(float), const std::string defaultName = "");
+
+        float (*GetEasingFunctionByName(const std::string name, float (*defaultFunction)(float) = EaseInOutQuad))(float);//function that returns pointer to a function
     }
 }

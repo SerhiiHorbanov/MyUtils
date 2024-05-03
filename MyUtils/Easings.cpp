@@ -26,7 +26,7 @@ namespace MyUtils
         /// <returns>1 - cos((x * Pi) / 2)</returns>
         float EaseInSine(const float x)
         {
-            return 1 - cos((x * Pi) / 2);
+            return 1 - cos((x * PI) / 2);
         }
         /// <summary>
         /// visual reference: https://easings.net/#easeOutSine
@@ -34,14 +34,14 @@ namespace MyUtils
         /// <returns>sin((x * Pi) / 2)</returns>
         float EaseOutSine(const float x)
         {
-            return sin((x * Pi) / 2);
+            return sin((x * PI) / 2);
         }
         /// <summary>
         /// visual reference: https://easings.net/#easeInOutSine
         /// </summary>
         float EaseInOutSine(const float x)
         {
-            return -(cos(Pi * x) - 1) / 2;
+            return -(cos(PI * x) - 1) / 2;
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace MyUtils
         /// </summary>
         float EaseInElastic(const float x)
         {
-            const float c4 = (2 * Pi) / 3;
+            const float c4 = (2 * PI) / 3;
 
             return x == 0
                 ? 0
@@ -288,7 +288,7 @@ namespace MyUtils
         /// </summary>
         float EaseOutElastic(const float x)
         {
-            const float c4 = (2 * Pi) / 3;
+            const float c4 = (2 * PI) / 3;
 
             return x == 0
                 ? 0
@@ -301,7 +301,7 @@ namespace MyUtils
         /// </summary>
         float EaseInOutElastic(const float x)
         {
-            const float c5 = (2 * Pi) / 4.5;
+            const float c5 = (2 * PI) / 4.5;
 
             return x == 0
                 ? 0

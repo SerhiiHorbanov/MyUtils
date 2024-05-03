@@ -17,26 +17,26 @@ namespace MyUtils
                 delete _state;
             }
 
-            inline void handle()
+            inline void Handle()
             {
-                _state->handle(*this);
+                _state->Handle(*this);
             }
 
-            inline void setState(MyState *newState)
+            inline void SetState(MyState *newState)
             {
                 delete _state;
                 _state = newState;
             }
-            inline void setStateWithoutDeletingOld(MyState* newState)
+            inline void SetStateWithoutDeletingOld(MyState* newState)
             {
                 _state = newState;
             }
-            inline void getState(MyState* newState)
+            inline void GetState(MyState* newState)
             {
                 _state = newState;
             }
 
-            inline bool hasState()
+            inline bool HasState()
             {
                 return _state != nullptr;
             }

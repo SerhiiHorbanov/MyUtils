@@ -8,7 +8,7 @@ namespace MyUtils
         class MyState
         {
         public:
-            virtual void handle(MyStateMachine& machine) = 0;
+            virtual void Handle(MyStateMachine& machine) = 0;
         };
     }
 }

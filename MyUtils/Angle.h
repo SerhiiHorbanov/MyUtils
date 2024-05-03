@@ -51,28 +51,28 @@ namespace MyUtils
     #pragma region Radians
                 inline float GetRadians() const
                 {
-                    return fromDegreesToRadians(_degrees);
+                    return FromDegreesToRadians(_degrees);
                 }
                 inline float Radians() const
                 {
-                    return fromDegreesToRadians(_degrees);
+                    return FromDegreesToRadians(_degrees);
                 }
                 inline float GetRad() const
                 {
-                    return fromDegreesToRadians(_degrees);
+                    return FromDegreesToRadians(_degrees);
                 }
                 inline float Rad() const
                 {
-                    return fromDegreesToRadians(_degrees);
+                    return FromDegreesToRadians(_degrees);
                 }
 
                 inline void SetRadians(const float newValue)
                 {
-                    _degrees = fromRadiansToDegrees(newValue);
+                    _degrees = FromRadiansToDegrees(newValue);
                 }
                 inline void SetRad(const float newValue)
                 {
-                    _degrees = fromRadiansToDegrees(newValue);
+                    _degrees = FromRadiansToDegrees(newValue);
                 }
     #pragma endregion
 #pragma endregion

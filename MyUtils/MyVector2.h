@@ -43,55 +43,55 @@ namespace MyUtils
             static MyVector2<T> PolarToCartesian(float length, float angleRadians);
 
             template <typename U>
-            inline float distanceTo(const MyVector2<U>& otherVector)
+            inline float DistanceTo(const MyVector2<U>& otherVector)
             {
                 return distance(static_cast<float>(x), static_cast<float>(y), static_cast<float>(otherVector.x), static_cast<float>(otherVector.y));
             }
             template <typename U>
-            inline float distanceTo(U x2, U y2)
+            inline float DistanceTo(U x2, U y2)
             {
                 return distance(static_cast<float>(x), static_cast<float>(y), static_cast<float>(x2), static_cast<float>(y2));
             }
 
             template <typename U>
-            inline float distanceSquaredTo(const MyVector2<U>& vector)
+            inline float DistanceSquaredTo(const MyVector2<U>& vector)
             {
                 return distanceSquared(static_cast<float>(x), static_cast<float>(y), static_cast<float>(vector.x), static_cast<float>(vector.y));
             }
             template <typename U>
-            inline float distanceSquaredTo(U x2, U y2)
+            inline float DistanceSquaredTo(U x2, U y2)
             {
                 return distanceSquared(static_cast<float>(x), static_cast<float>(y), static_cast<float>(x2), static_cast<float>(y2));
             }
 
-            inline float getLength()
+            inline float GetLength()
             {
                 return distance(static_cast<float>(x), static_cast<float>(y));
             }
-            inline float length()
+            inline float Length()
             {
-                return getLength();
+                return GetLength();
             }
-            inline float len()
+            inline float Len()
             {
-                return getLength();
+                return GetLength();
             }
 
-            inline float getLengthSquared()
+            inline float GetLengthSquared()
             {
                 return distanceSquared(static_cast<float>(x), static_cast<float>(y));
             }
-            inline float lengthSquared()
+            inline float LengthSquared()
             {
-                return getLengthSquared();
+                return GetLengthSquared();
             }
-            inline float lenSquared()
+            inline float LenSquared()
             {
-                return getLengthSquared();
+                return GetLengthSquared();
             }
 
             template <typename U>
-            inline float dot(const MyVector2<U>& right)
+            inline float Dot(const MyVector2<U>& right)
             {
                 return dotProduct(right);
             }
@@ -205,15 +205,15 @@ namespace MyUtils
         }
 
         template <typename T, typename U>
-        inline float dotProduct(const MyVector2<T>& left, const MyVector2<U>& right)
+        inline float DotProduct(const MyVector2<T>& left, const MyVector2<U>& right)
         {
             return (left.x * right.x) + (left.y * right.y);
         }
 
         template <typename T, typename U>
-        inline float dot(const MyVector2<T>& left, const MyVector2<U>& right)
+        inline float Dot(const MyVector2<T>& left, const MyVector2<U>& right)
         {
-            return dotProduct(left, right);
+            return DotProduct(left, right);
         }
 
         typedef MyVector2<int>            MyVector2i;

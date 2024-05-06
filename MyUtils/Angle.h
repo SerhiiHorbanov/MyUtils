@@ -10,7 +10,7 @@ namespace MyUtils
         namespace AngleUtils
         {
             /// <summary>
-            /// wrapper struct for float. made just for abstraction and to make a clear division between radians angles and degree angles.
+            /// wrapper struct for float. made mostly for abstraction and to make a clear division between radians angles and degree angles.
             /// </summary>
             struct Angle
             {
@@ -76,24 +76,50 @@ namespace MyUtils
                 }
     #pragma endregion
 #pragma endregion
-
-#pragma region AbsoluteMethods
-                inline Angle Abs() const
+                /// <returns>Angle that is the same but is between 0 and 360 degrees</returns>
+                inline Angle Absolute() const
                 {
-                    float absDegrees = _degrees > 0 ? _degrees : -_degrees;
-                    return std::fmod(absDegrees, 360.0f);
+                    float limited360 = std::fmod(_degrees, 360.0f);
+                    float absDegrees = limited360 > 0 ? limited360 : limited360 + 360;
+                    return absDegrees;
                 }
-                inline float AbsDegrees() const
+                /// <returns>Angle that is the same but is between 0 and 360 degrees</returns>
+                inline float AbsoluteDegrees() const
                 {
-                    return Abs().Degrees();
+                    return Absolute().Degrees();
                 }
+                /// <returns>Angle that is the same but is between 0 and 360 degrees</returns>
                 inline float AbsDeg() const
                 {
-                    return Abs().Degrees();
+                    return Absolute().Degrees();
                 }
-#pragma endregion
+                /// <returns>Angle that is the same but is between 0 and 360 degrees</returns>
+                inline float AbsoluteRadians() const
+                {
+                    return Absolute().Radians();
+                }
+                /// <returns>Angle that is the same but is between 0 and 360 degrees</returns>
+                inline float AbsRad() const
+                {
+                    return Absolute().Radians();
+                }
+                /// <summary>
+                /// makes the angle between 0 and 360
+                /// </summary>
+                inline Angle& MakeAbsolute()
+                {
+                    _degrees = AbsoluteDegrees();
+                    return *this;
+                }
 
-
+                inline Angle Opposite()
+                {
+                    return -_degrees;
+                }
+                inline Angle& MakeOpposite()
+                {
+                    _degrees = -_degrees;
+                }
 
                 explicit inline operator float()
                 {
@@ -145,109 +171,35 @@ namespace MyUtils
 
             inline bool operator == (const Angle left, const Angle right)
             {
-                return left.AbsDegrees() == right.AbsDegrees();
+                return left.AbsoluteDegrees() == right.AbsoluteDegrees();
             }
             inline bool operator != (const Angle left, const Angle right)
             {
                 return left.Degrees() != right.Degrees();
             }
-#pragma endregion
 
-#pragma region Angle-FloatOperations
-            inline Angle operator +(const Angle left, const float right)
+            inline Angle operator -(const Angle right)
             {
-                return left.Degrees() + right;
+                return -right.Degrees();
             }
-            inline Angle operator -(const Angle left, const float right)
+            inline Angle operator +(const Angle right)
             {
-                return left.Degrees() - right;
+                return right;
             }
-            inline Angle operator +=(Angle& left, const float right)
+            /// <summary>
+            /// function for comparing two angles. for example for something like Difference(Angle(90.0, 90.01) smaller than 1
+            /// </summary>
+            /// <returns>Absolute value of left - right</returns>
+            inline float Difference(const Angle left, const Angle right)
             {
-                left.SetDegrees(left.Degrees() + right);
-                return left;
+                float idkHowToCallThisVariableDontKillMe = (float)(left - right);
+                return idkHowToCallThisVariableDontKillMe > 0 ? idkHowToCallThisVariableDontKillMe : -idkHowToCallThisVariableDontKillMe;
             }
-            inline Angle operator -=(Angle& left, const float right)
+            inline bool DifferenceSmallerThan(const Angle left, const Angle right, const float maxDifference)
             {
-                left.SetDegrees(left.Degrees() - right);
-                return left;
-            }
-
-            inline Angle operator *(const Angle left, const float right)
-            {
-                return left.Degrees() * right;
-            }
-            inline Angle operator /(const Angle left, const float right)
-            {
-                return left.Degrees() / right;
-            }
-            inline Angle operator *=(Angle& left, const float right)
-            {
-                left.SetDegrees(left.Degrees() * right);
-                return left;
-            }
-            inline Angle operator /=(Angle& left, const float right)
-            {
-                left.SetDegrees(left.Degrees() / right);
-                return left;
-            }
-
-            inline bool operator == (const Angle left, const float right)
-            {
-                return left.Degrees() == right;
-            }
-            inline bool operator != (const Angle left, const float right)
-            {
-                return left.Degrees() != right;
-            }
-#pragma endregion
-
-#pragma region Float-AngleOperations
-            inline Angle operator +(const float left, const Angle right)
-            {
-                return left + right.Degrees();
-            }
-            inline Angle operator -(const float left, const Angle right)
-            {
-                return left - right.Degrees();
-            }
-            inline Angle operator +=(float& left, const Angle right)
-            {
-                left += right.Degrees();
-                return left;
-            }
-            inline Angle operator -=(float& left, const Angle right)
-            {
-                left -= right.Degrees();
-                return left;
-            }
-
-            inline Angle operator *(const float left, const Angle right)
-            {
-                return left * right.Degrees();
-            }
-            inline Angle operator /(const float left, const Angle right)
-            {
-                return left / right.Degrees();
-            }
-            inline Angle operator *=(float& left, const Angle right)
-            {
-                left *= right.Degrees();
-                return left;
-            }
-            inline Angle operator /=(float& left, const Angle right)
-            {
-                left /= right.Degrees();
-                return left;
-            }
-
-            inline bool operator == (const float left, const Angle right)
-            {
-                return left == right.Degrees();
-            }
-            inline bool operator != (const float left, const Angle right)
-            {
-                return left != right.Degrees();
+                float idkHowToCallThisVariableDontKillMe = (float)(left - right);
+                float idkHowToCallThisVariableDontKillMePART2 = idkHowToCallThisVariableDontKillMe > 0 ? idkHowToCallThisVariableDontKillMe : -idkHowToCallThisVariableDontKillMe;
+                return idkHowToCallThisVariableDontKillMePART2 < maxDifference;
             }
 #pragma endregion
         }

@@ -31,16 +31,17 @@ namespace MyUtils
             {
                 _state = newState;
             }
-            inline void GetState(MyState* newState)
+
+            inline MyState* GetState()
             {
-                _state = newState;
+                return _state;
             }
 
             inline bool HasState()
             {
                 return _state != nullptr;
             }
-        private:
+        protected:
             MyState *_state;
         };
     }

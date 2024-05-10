@@ -6,31 +6,15 @@ namespace MyUtils
     namespace MyMath
     {
 #pragma region DistanceCalculation
-        /// <summary>
-        /// distance squared between two points with coords (X1, Y1) and (X2, Y2)
-        /// </summary>
-        float DistanceSquared(float X1, float Y1, float X2 = 0, float Y2 = 0);
-        /// <summary>
-        /// distance squared between two points with coords (X1, Y1) and (X2, Y2)
-        /// </summary>
-        inline float DistSq(float X1, float Y1, float X2 = 0, float Y2 = 0)
-        {
-            return DistanceSquared(X1, Y1, X2, Y2);
-        }
-        /// <summary>
-        /// distance between two points with coords (X1, Y1) and (X2, Y2)
-        /// </summary>
-        inline float Distance(float X1, float Y1, float X2 = 0, float Y2 = 0)
-        {
-            return std::sqrtf(DistanceSquared(X1, Y1, X2, Y2));
-        }
-        /// <summary>
-        /// distance between two points with coords (X1, Y1) and (X2, Y2)
-        /// </summary>
-        inline float Dist(float X1, float Y1, float X2 = 0, float Y2 = 0)
-        {
-            return Distance(X1, Y1, X2, Y2);
-        }
+        float DistanceSquared(const float X1, const float Y1, const float X2 = 0, const float Y2 = 0);
+        float DistSq(const float X1, const float Y1, const float X2 = 0, const float Y2 = 0);
+        float Distance(const float X1, const float Y1, const float X2 = 0, const float Y2 = 0);
+        float Dist(const float X1, const float Y1, const float X2 = 0, const float Y2 = 0);
+        
+        float DistanceSquared3D(const float X1, const float Y1, const float Z1, const float X2 = 0, const float Y2 = 0, const float Z2 = 0);
+        float DistSq3D(const float X1, const float Y1, const float Z1, const float X2 = 0, const float Y2 = 0, const float Z2 = 0);
+        float Distance3D(const float X1, const float Y1, const float Z1, const float X2 = 0, const float Y2 = 0, const float Z2 = 0);
+        float Dist3D(const float X1, const float Y1, const float Z1, const float X2 = 0, const float Y2 = 0, const float Z2 = 0);
 #pragma endregion
     }
 }

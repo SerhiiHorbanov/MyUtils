@@ -6,6 +6,9 @@ namespace MyUtils
     namespace MyMath
     {
         template <typename T>
+        struct MyVector3;
+
+        template <typename T>
         struct MyVector2
         {
         public:
@@ -27,17 +30,19 @@ namespace MyUtils
             template <typename U>
             explicit operator MyVector2<U>();
             template <typename U>
+            explicit operator MyVector3<U>();
+            template <typename U>
             explicit operator std::pair<U, U>();
 
             std::string ToString();
 
             template <typename U>
-            float DistanceTo(const MyVector2<U>& otherVector) const;
+            float DistanceTo(const MyVector2<U>& other) const;
             template <typename U>
             float DistanceTo(U x2, U y2) const;
 
             template <typename U>
-            float DistanceSquaredTo(const MyVector2<U>& vector) const;
+            float DistanceSquaredTo(const MyVector2<U>& other) const;
             template <typename U>
             float DistanceSquaredTo(U x2, U y2) const;
 
@@ -63,11 +68,6 @@ namespace MyUtils
         MyVector2<T> operator -(const MyVector2<T>& right);
 
         template <typename T>
-        MyVector2<T>& operator +=(MyVector2<T>& left, const MyVector2<T>& right);
-        template <typename T>
-        MyVector2<T>& operator -=(MyVector2<T>& left, const MyVector2<T>& right);
-
-        template <typename T>
         MyVector2<T> operator +(const MyVector2<T>& left, const MyVector2<T>& right);
         template <typename T>
         MyVector2<T> operator -(const MyVector2<T>& left, const MyVector2<T>& right);
@@ -80,19 +80,26 @@ namespace MyUtils
         MyVector2<T> operator *(const MyVector2<T>& left, const MyVector2<T>& right);
 
         template <typename T>
+        MyVector2<T> operator /(const MyVector2<T>& left, T right);
+        template <typename T>
+        MyVector2<T> operator /(T left, const MyVector2<T>& right);
+        template <typename T>
+        MyVector2<T> operator /(const MyVector2<T>& left, const MyVector2<T>& right);
+
+        template <typename T>
+        MyVector2<T>& operator +=(MyVector2<T>& left, const MyVector2<T>& right);
+        template <typename T>
+        MyVector2<T>& operator -=(MyVector2<T>& left, const MyVector2<T>& right);
+
+        template <typename T>
         MyVector2<T>& operator *=(MyVector2<T>& left, const MyVector2<T>& right);
         template <typename T>
         MyVector2<T>& operator *=(MyVector2<T>& left, T right);
 
         template <typename T>
-        MyVector2<T> operator /(const MyVector2<T>& left, T right);
+        MyVector2<T>& operator /=(MyVector2<T>& left, const MyVector2<T>& right);
         template <typename T>
         MyVector2<T>& operator /=(MyVector2<T>& left, T right);
-
-        template <typename T>
-        MyVector2<T> operator /(const MyVector2<T>& left, const MyVector2<T>& right);
-        template<typename T>
-        MyVector2<T>& operator/=(MyVector2<T>& left, const MyVector2<T>& right);
 
         template <typename T>
         bool operator ==(const MyVector2<T>& left, const MyVector2<T>& right);
@@ -100,16 +107,10 @@ namespace MyUtils
         bool operator !=(const MyVector2<T>& left, const MyVector2<T>& right);
 
         template <typename T, typename U>
-        float DotProduct(const MyVector2<T>& left, const MyVector2<U>& right)
-        {
-            return (left.x * right.x) + (left.y * right.y);
-        }
+        float DotProduct(const MyVector2<T>& left, const MyVector2<U>& right);
 
         template <typename T, typename U>
-        float Dot(const MyVector2<T>& left, const MyVector2<U>& right)
-        {
-            return DotProduct(left, right);
-        }
+        float Dot(const MyVector2<T>& left, const MyVector2<U>& right);
 
         typedef MyVector2<int>            MyVector2i;
         typedef MyVector2<long>           MyVector2l;

@@ -1,4 +1,4 @@
-#include "MyMath.h"
+#include "MyDistanceCalculation.h"
 
 #pragma region 2DDistanceCalculations
 /// <summary>

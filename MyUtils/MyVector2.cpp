@@ -1,5 +1,6 @@
 #include <string>
 #include "MyVector2.h"
+#include "MyDistanceCalculation.h"
 
 namespace MyUtils
 {

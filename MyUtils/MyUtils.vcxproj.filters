@@ -30,6 +30,9 @@
     <ClCompile Include="MyVector3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MyConsoleTextAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyDistanceCalculation.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MyVector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyConsoleTextAttribute.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

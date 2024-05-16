@@ -131,6 +131,7 @@
     <ClInclude Include="Constants.h" />
     <ClInclude Include="DegreesAndRadiansConversion.h" />
     <ClInclude Include="Easings.h" />
+    <ClInclude Include="MyConsoleTextAttribute.h" />
     <ClInclude Include="MyDistanceCalculation.h" />
     <ClInclude Include="MyVector2.h" />
     <ClInclude Include="MyState.h" />
@@ -139,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Easings.cpp" />
+    <ClCompile Include="MyConsoleTextAttribute.cpp" />
     <ClCompile Include="MyDistanceCalculation.cpp" />
     <ClCompile Include="MyVector2.cpp" />
     <ClCompile Include="MyVector3.cpp" />

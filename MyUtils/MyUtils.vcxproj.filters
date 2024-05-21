@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
@@ -12,6 +12,9 @@
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\ISerializable Interfaces">
+      <UniqueIdentifier>{432d925b-f6d4-4eb9-9eae-8848ff1c26c8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +67,15 @@
     </ClInclude>
     <ClInclude Include="MyConsoleTextAttribute.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFloatSerializable.h">
+      <Filter>Header Files\ISerializable Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IIntSerializable.h">
+      <Filter>Header Files\ISerializable Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IStringSerializable.h">
+      <Filter>Header Files\ISerializable Interfaces</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

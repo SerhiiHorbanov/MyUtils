@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClInclude Include="Angle.h" />
     <ClInclude Include="Constants.h" />
+    <ClInclude Include="IFloatSerializable.h" />
+    <ClInclude Include="IIntSerializable.h" />
+    <ClInclude Include="IStringSerializable.h" />
     <ClInclude Include="DegreesAndRadiansConversion.h" />
     <ClInclude Include="Easings.h" />
     <ClInclude Include="MyConsoleTextAttribute.h" />

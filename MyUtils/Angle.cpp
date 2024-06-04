@@ -112,6 +112,15 @@ namespace MyUtils
                 return *this;
             }
 
+            Angle operator+(const Angle right)
+            {
+                return right;
+            }
+            Angle operator-(const Angle right)
+            {
+                return -(right.Degrees());
+            }
+
             Angle operator +(const Angle left, const Angle right)
             {
                 return left.Degrees() + right.Degrees();
@@ -157,6 +166,26 @@ namespace MyUtils
             bool operator !=(const Angle left, const Angle right)
             {
                 return left.Degrees() != right.Degrees();
+            }
+
+            Angle operator""deg(long double degrees)
+            {
+                return degrees;
+            }
+
+            Angle operator""deg(unsigned long long degrees)
+            {
+                return degrees;
+            }
+
+            Angle operator""rad(long double radians)
+            {
+                return FromRadiansToDegrees(radians);
+            }
+
+            Angle operator""rad(unsigned long long int radians)
+            {
+                return FromRadiansToDegrees(radians);
             }
 
             /// <summary>

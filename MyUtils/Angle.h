@@ -58,6 +58,8 @@ namespace MyUtils
             private:
                 float _degrees;
             };
+            Angle operator +(const Angle right);
+            Angle operator -(const Angle right);
 
             Angle operator +(const Angle left, const Angle right);
             Angle operator -(const Angle left, const Angle right);
@@ -71,6 +73,11 @@ namespace MyUtils
 
             bool operator ==(const Angle left, const Angle right);
             bool operator !=(const Angle left, const Angle right);
+
+            Angle operator ""deg(long double degrees);
+            Angle operator ""deg(unsigned long long degrees);
+            Angle operator ""rad(long double radians);
+            Angle operator ""rad(unsigned long long int radians);
 
             float Difference(const Angle left, const Angle right);
             bool DifferenceIsLessThan(const Angle left, const Angle right, const float maxDifference);

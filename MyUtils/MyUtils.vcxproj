@@ -146,6 +146,7 @@
     <ClInclude Include="VectorToTextSerialization.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Angle.cpp" />
     <ClCompile Include="Easings.cpp" />
     <ClCompile Include="MyConsoleTextAttribute.cpp" />
     <ClCompile Include="MyDistanceCalculation.cpp" />

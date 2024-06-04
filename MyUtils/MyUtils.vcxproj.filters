@@ -13,84 +13,120 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\ISerializable Interfaces">
+    <Filter Include="Header Files\MyMath">
+      <UniqueIdentifier>{381401d2-878d-4131-907b-aaa395646438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MyMath\AngleUtils">
+      <UniqueIdentifier>{2007fab8-abda-4acb-929e-5689a810a396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MyConsoleUtils">
+      <UniqueIdentifier>{16068c59-fb5d-4a06-ba04-46f21756b310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MyEasings">
+      <UniqueIdentifier>{98f14387-3417-4109-b41c-24412dec28c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MyStateSystem">
+      <UniqueIdentifier>{aafc474c-feef-42a7-a517-6abad7ef13c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MyMath">
+      <UniqueIdentifier>{305ec71c-a421-4849-8393-64062af028d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MyMath\MyAngleUtils">
+      <UniqueIdentifier>{d0b49a72-94c7-4118-b91d-4bac6507f1ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MySerialization">
       <UniqueIdentifier>{432d925b-f6d4-4eb9-9eae-8848ff1c26c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MySerialization">
+      <UniqueIdentifier>{de5b4b88-8b39-46f3-b7c4-de9c01c6c809}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MyConsoleUtils">
+      <UniqueIdentifier>{9e5d1e6c-bd3c-4e16-957b-043d61706cad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MyEasings">
+      <UniqueIdentifier>{48e86ce5-e69a-4996-af91-d32fe27057b7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyDistanceCalculation.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Angle.cpp">
+      <Filter>Source Files\MyMath\MyAngleUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorTrigonometry.cpp">
+      <Filter>Source Files\MyMath\MyAngleUtils</Filter>
     </ClCompile>
     <ClCompile Include="MyVector2.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\MyMath</Filter>
     </ClCompile>
-    <ClCompile Include="Easings.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="MyVector3.cpp">
+      <Filter>Source Files\MyMath</Filter>
     </ClCompile>
     <ClCompile Include="VectorTrigonometry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MyVector3.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="MyDistanceCalculation.cpp">
+      <Filter>Source Files\MyMath</Filter>
     </ClCompile>
     <ClCompile Include="MyConsoleTextAttribute.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\MyConsoleUtils</Filter>
     </ClCompile>
-    <ClCompile Include="Angle.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Easings.cpp">
+      <Filter>Source Files\MyEasings</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyDistanceCalculation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyVector2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyStateMachine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Easings.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Angle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Constants.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DegreesAndRadiansConversion.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyVector3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyConsoleTextAttribute.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="IFloatSerializable.h">
-      <Filter>Header Files\ISerializable Interfaces</Filter>
+      <Filter>Header Files\MySerialization</Filter>
     </ClInclude>
     <ClInclude Include="IIntSerializable.h">
-      <Filter>Header Files\ISerializable Interfaces</Filter>
+      <Filter>Header Files\MySerialization</Filter>
     </ClInclude>
     <ClInclude Include="IStringSerializable.h">
-      <Filter>Header Files\ISerializable Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="CollectionToTextSerialization.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="VectorToTextSerialization.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\MySerialization</Filter>
     </ClInclude>
     <ClInclude Include="ArrayToTextSerialization.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\MySerialization</Filter>
+    </ClInclude>
+    <ClInclude Include="CollectionToTextSerialization.h">
+      <Filter>Header Files\MySerialization</Filter>
     </ClInclude>
     <ClInclude Include="PointerArrayToTextSerialization.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\MySerialization</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorToTextSerialization.h">
+      <Filter>Header Files\MySerialization</Filter>
+    </ClInclude>
+    <ClInclude Include="Easings.h">
+      <Filter>Header Files\MySerialization</Filter>
+    </ClInclude>
+    <ClInclude Include="Angle.h">
+      <Filter>Header Files\MyMath\AngleUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="DegreesAndRadiansConversion.h">
+      <Filter>Header Files\MyMath\AngleUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="MyConsoleTextAttribute.h">
+      <Filter>Header Files\MyConsoleUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="MyDistanceCalculation.h">
+      <Filter>Header Files\MyMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Header Files\MyMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Easings.h">
+      <Filter>Header Files\MyEasings</Filter>
+    </ClInclude>
+    <ClInclude Include="MyState.h">
+      <Filter>Header Files\MyStateSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="MyStateMachine.h">
+      <Filter>Header Files\MyStateSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="MyVector2.h">
+      <Filter>Header Files\MyMath</Filter>
+    </ClInclude>
+    <ClInclude Include="MyVector3.h">
+      <Filter>Header Files\MyMath</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

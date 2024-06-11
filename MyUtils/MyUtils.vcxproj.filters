@@ -72,6 +72,9 @@
     <ClCompile Include="Easings.cpp">
       <Filter>Source Files\MyEasings</Filter>
     </ClCompile>
+    <ClCompile Include="MyRectangle.cpp">
+      <Filter>Source Files\MyMath</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IFloatSerializable.h">
@@ -126,6 +129,9 @@
       <Filter>Header Files\MyMath</Filter>
     </ClInclude>
     <ClInclude Include="MyVector3.h">
+      <Filter>Header Files\MyMath</Filter>
+    </ClInclude>
+    <ClInclude Include="MyRectangle.h">
       <Filter>Header Files\MyMath</Filter>
     </ClInclude>
   </ItemGroup>

@@ -143,6 +143,7 @@
     <ClInclude Include="MyStateMachine.h" />
     <ClInclude Include="MyVector3.h" />
     <ClInclude Include="PointerArrayToTextSerialization.h" />
+    <ClInclude Include="MyRectangle.h" />
     <ClInclude Include="VectorToTextSerialization.h" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +153,7 @@
     <ClCompile Include="MyDistanceCalculation.cpp" />
     <ClCompile Include="MyVector2.cpp" />
     <ClCompile Include="MyVector3.cpp" />
+    <ClCompile Include="MyRectangle.cpp" />
     <ClCompile Include="VectorTrigonometry.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

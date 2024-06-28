@@ -68,7 +68,10 @@ namespace MyUtils
             MyRectangle<NumberType>& MoveX(const NumberType moveX);
             MyRectangle<NumberType>& MoveY(const NumberType moveY);
             MyRectangle<NumberType>& Move(const MyVector2<NumberType> move);
-            
+
+            bool IsPointInsideOrOnEdge(MyVector2<NumberType> point);
+            bool IsPointInside(MyVector2<NumberType> point);
+
             // you can uncomment these lines for some properties, but they can create some confusion so i commented them
             // __declspec(property(get = GetRight, put = SetRight)) NumberType right;
             // __declspec(property(get = GetLeft, put = SetLeft)) NumberType left;

@@ -201,5 +201,16 @@ namespace MyUtils
             MoveX(move.x);
             MoveX(move.y);
         }
+
+        template<typename NumberType>
+        bool MyRectangle<NumberType>::IsPointInsideOrOnEdge(MyVector2<NumberType> point)
+        {
+            return point.x <= _rightTop.x && point.x >= _leftBottom.x && point.y <= _rightTop.y && point.y >= _leftBottom.y;
+        }
+        template<typename NumberType>
+        bool MyRectangle<NumberType>::IsPointInside(MyVector2<NumberType> point)
+        {
+            return point.x < _rightTop.x && point.x > _leftBottom.x && point.y < _rightTop.y && point.y > _leftBottom.y;
+        }
     }
 }

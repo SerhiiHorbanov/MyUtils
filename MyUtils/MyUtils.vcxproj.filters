@@ -25,9 +25,6 @@
     <Filter Include="Header Files\MyEasings">
       <UniqueIdentifier>{98f14387-3417-4109-b41c-24412dec28c2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\MyStateSystem">
-      <UniqueIdentifier>{aafc474c-feef-42a7-a517-6abad7ef13c4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\MyMath">
       <UniqueIdentifier>{305ec71c-a421-4849-8393-64062af028d8}</UniqueIdentifier>
     </Filter>
@@ -127,12 +124,6 @@
     </ClInclude>
     <ClInclude Include="Easings.h">
       <Filter>Header Files\MyEasings</Filter>
-    </ClInclude>
-    <ClInclude Include="MyState.h">
-      <Filter>Header Files\MyStateSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="MyStateMachine.h">
-      <Filter>Header Files\MyStateSystem</Filter>
     </ClInclude>
     <ClInclude Include="MyVector2.h">
       <Filter>Header Files\MyMath</Filter>

@@ -140,8 +140,6 @@
     <ClInclude Include="MyDistanceCalculation.h" />
     <ClInclude Include="Observable.h" />
     <ClInclude Include="MyVector2.h" />
-    <ClInclude Include="MyState.h" />
-    <ClInclude Include="MyStateMachine.h" />
     <ClInclude Include="MyVector3.h" />
     <ClInclude Include="PointerArrayToTextSerialization.h" />
     <ClInclude Include="MyRectangle.h" />

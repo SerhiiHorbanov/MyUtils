@@ -46,6 +46,12 @@
     <Filter Include="Source Files\MyEasings">
       <UniqueIdentifier>{48e86ce5-e69a-4996-af91-d32fe27057b7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\MyObserver">
+      <UniqueIdentifier>{6a81b310-039d-492f-8bee-97545df5b498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MyObserver">
+      <UniqueIdentifier>{ebb3ef7a-fe7a-4db1-8ca4-176e8868c584}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Angle.cpp">
@@ -74,6 +80,9 @@
     </ClCompile>
     <ClCompile Include="MyRectangle.cpp">
       <Filter>Source Files\MyMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Observable.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +142,9 @@
     </ClInclude>
     <ClInclude Include="MyRectangle.h">
       <Filter>Header Files\MyMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Observable.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

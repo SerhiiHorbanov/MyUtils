@@ -22,9 +22,6 @@
     <Filter Include="Header Files\Math">
       <UniqueIdentifier>{381401d2-878d-4131-907b-aaa395646438}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Math\AngleUtils">
-      <UniqueIdentifier>{2007fab8-abda-4acb-929e-5689a810a396}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Serialization">
       <UniqueIdentifier>{432d925b-f6d4-4eb9-9eae-8848ff1c26c8}</UniqueIdentifier>
     </Filter>
@@ -57,9 +54,6 @@
     <ClCompile Include="ConsoleTextAttribute.cpp">
       <Filter>Source Files\ConsoleUtils</Filter>
     </ClCompile>
-    <ClCompile Include="Easings.cpp">
-      <Filter>Source Files\Easings</Filter>
-    </ClCompile>
     <ClCompile Include="MyRectangle.cpp">
       <Filter>Source Files\Math</Filter>
     </ClCompile>
@@ -70,6 +64,9 @@
       <Filter>Source Files\Math</Filter>
     </ClCompile>
     <ClCompile Include="VectorTrigonometry.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Easings.cpp">
       <Filter>Source Files\Math</Filter>
     </ClCompile>
   </ItemGroup>
@@ -104,9 +101,6 @@
     <ClInclude Include="Constants.h">
       <Filter>Header Files\Math</Filter>
     </ClInclude>
-    <ClInclude Include="Easings.h">
-      <Filter>Header Files\Easings</Filter>
-    </ClInclude>
     <ClInclude Include="MyVector2.h">
       <Filter>Header Files\Math</Filter>
     </ClInclude>
@@ -126,6 +120,9 @@
       <Filter>Header Files\Math</Filter>
     </ClInclude>
     <ClInclude Include="DegreesAndRadiansConversion.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Easings.h">
       <Filter>Header Files\Math</Filter>
     </ClInclude>
   </ItemGroup>

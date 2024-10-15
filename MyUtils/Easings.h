@@ -3,7 +3,7 @@
 
 namespace My
 {
-    namespace Easings
+    namespace Math
     {
         float Linear(const float x, const float start = 0, const float end = 1);
         float LinearFromZeroToOne(const float x, const float start = 0, const float end = 1);
@@ -54,37 +54,5 @@ namespace My
         float EaseInBounce(const float x);
         float EaseOutBounce(const float x);
         float EaseInOutBounce(const float x);
-
-        float (*const EasingFunctionsPointersWithOneParam[30])(float) =
-        {
-            EaseInSine, EaseOutSine, EaseInOutSine,
-            EaseInQuad, EaseOutQuad, EaseInOutQuad,
-            EaseInCubic, EaseOutCubic, EaseInOutCubic,
-            EaseInQuart, EaseOutQuart, EaseInOutQuart,
-            EaseInQuint, EaseOutQuint, EaseInOutQuint,
-            EaseInExpo, EaseOutExpo, EaseInOutExpo,
-            EaseInCirc, EaseOutCirc, EaseInOutCirc,
-            EaseInBack, EaseOutBack, EaseInOutBack,
-            EaseInElastic, EaseOutElastic, EaseInOutElastic,
-            EaseInBounce, EaseOutBounce, EaseInOutBounce,
-        };
-
-        const std::string EasingFunctionsWithOneParamNames[30] =
-        {
-            "EaseInSine", "EaseOutSine", "EaseInOutSine",
-            "EaseInQuad", "EaseOutQuad", "EaseInOutQuad",
-            "EaseInCubic", "EaseOutCubic", "EaseInOutCubic",
-            "EaseInQuart", "EaseOutQuart", "EaseInOutQuart",
-            "EaseInQuint", "EaseOutQuint", "EaseInOutQuint",
-            "EaseInExpo", "EaseOutExpo", "EaseInOutExpo",
-            "EaseInCirc", "EaseOutCirc", "EaseInOutCirc",
-            "EaseInBack", "EaseOutBack", "EaseInOutBack",
-            "EaseInElastic", "EaseOutElastic", "EaseInOutElastic",
-            "EaseInBounce", "EaseOutBounce", "EaseInOutBounce",
-        };
-
-        std::string GetEasingFunctionNameByPointer(float (*const function)(float), const std::string defaultName = "");
-
-        float (*GetEasingFunctionByName(const std::string name, float (*defaultFunction)(float) = EaseInOutQuad))(float);//function that returns pointer to a function
     }
 }

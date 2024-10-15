@@ -1,9 +1,9 @@
 #include "MyRectangle.h"
-#include "MyDistanceCalculation.h"
+#include "DistanceCalculation.h"
 
-namespace MyUtils
+namespace My
 {
-    namespace MyMath
+    namespace Math
     {
         template<typename NumberType>
         NumberType MyRectangle<NumberType>::GetRight() const

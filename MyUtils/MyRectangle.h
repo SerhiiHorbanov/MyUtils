@@ -1,9 +1,9 @@
 #pragma once
 #include "MyVector2.h"
 
-namespace MyUtils
+namespace My
 {
-    namespace MyMath
+    namespace Math
     {
         template<typename NumberType>
         struct MyRectangle

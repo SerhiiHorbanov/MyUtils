@@ -3,7 +3,7 @@
 //i wanna make a macro for that can define those ISomethingSerializable interfaces
 
 #include <string>
-namespace MyUtils
+namespace My
 {
     namespace MySerialization
     {

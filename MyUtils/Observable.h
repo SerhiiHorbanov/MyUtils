@@ -2,7 +2,7 @@
 #include <vector>
 #include <functional>
 
-namespace MyUtils
+namespace My
 {
     template <typename... CallBackArguments>
     struct Observable

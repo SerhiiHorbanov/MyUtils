@@ -1,6 +1,6 @@
 #pragma once
 
-namespace MyUtils
+namespace My
 {
     namespace MySerialization
     {

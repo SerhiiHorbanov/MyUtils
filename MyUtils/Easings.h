@@ -1,9 +1,9 @@
 #pragma once
 #include <string>
 
-namespace MyUtils
+namespace My
 {
-    namespace MyEasings
+    namespace Easings
     {
         float Linear(const float x, const float start = 0, const float end = 1);
         float LinearFromZeroToOne(const float x, const float start = 0, const float end = 1);

@@ -1,7 +1,7 @@
 #pragma once
 #include "CollectionToTextSerialization.h"
 
-namespace MyUtils
+namespace My
 {
     namespace MySerialization
     {

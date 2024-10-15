@@ -2,7 +2,7 @@
 #include <string>
 #include <functional>
 
-namespace MyUtils
+namespace My
 {
     namespace MySerialization
     {

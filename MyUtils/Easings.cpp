@@ -1,12 +1,10 @@
-#include "Easings.h"
 #include <cmath>
 #include "Constants.h"
+#include "Easings.h"
 
-using namespace MyUtils::MyMath;
-using namespace std;
-namespace MyUtils
+namespace My
 {
-    namespace MyEasings
+    namespace Easings
     {
         /// <returns>(x - start) / (end - start) </returns>
         float Linear(const const float x, const const float start, const const float end)
@@ -25,7 +23,7 @@ namespace MyUtils
         /// <returns>1 - cos((x * Pi) / 2)</returns>
         float EaseInSine(const float x)
         {
-            return 1 - cos((x * PI) / 2);
+            return 1 - cos((x * Math::PI) / 2);
         }
         /// <summary>
         /// visual reference: https://easings.net/#easeOutSine
@@ -33,14 +31,14 @@ namespace MyUtils
         /// <returns>sin((x * Pi) / 2)</returns>
         float EaseOutSine(const float x)
         {
-            return sin((x * PI) / 2);
+            return sin((x * Math::PI) / 2);
         }
         /// <summary>
         /// visual reference: https://easings.net/#easeInOutSine
         /// </summary>
         float EaseInOutSine(const float x)
         {
-            return -(cos(PI * x) - 1) / 2;
+            return -(cos(Math::PI * x) - 1) / 2;
         }
 
         /// <summary>
@@ -274,7 +272,7 @@ namespace MyUtils
         /// </summary>
         float EaseInElastic(const float x)
         {
-            const float c4 = (2 * PI) / 3;
+            const float c4 = (2 * Math::PI) / 3;
 
             return x == 0
                 ? 0
@@ -287,7 +285,7 @@ namespace MyUtils
         /// </summary>
         float EaseOutElastic(const float x)
         {
-            const float c4 = (2 * PI) / 3;
+            const float c4 = (2 * Math::PI) / 3;
 
             return x == 0
                 ? 0
@@ -300,7 +298,7 @@ namespace MyUtils
         /// </summary>
         float EaseInOutElastic(const float x)
         {
-            const float c5 = (2 * PI) / 4.5;
+            const float c5 = (2 * Math::PI) / 4.5;
 
             return x == 0
                 ? 0

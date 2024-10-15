@@ -1,6 +1,6 @@
 #include "Observable.h"
 
-namespace MyUtils
+namespace My
 {
     template <typename... CallBackArguments>
     void Observable<CallBackArguments...>::Notify(CallBackArguments... args)

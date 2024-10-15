@@ -1,9 +1,9 @@
 #pragma once
 #include <string>
 
-namespace MyUtils
+namespace My
 {
-    namespace MyMath
+    namespace Math
     {
         template <typename T>
         struct MyVector3;

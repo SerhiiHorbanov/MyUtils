@@ -2,7 +2,7 @@
 #include <array>
 #include "CollectionToTextSerialization.h"
 
-namespace MyUtils
+namespace My
 {
     namespace MySerialization
     {

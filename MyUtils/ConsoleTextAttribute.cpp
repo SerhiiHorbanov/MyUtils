@@ -1,102 +1,102 @@
-#include "MyConsoleTextAttribute.h"
-namespace MyUtils
+#include "ConsoleTextAttribute.h"
+namespace My
 {
-    namespace MyConsoleUtils
+    namespace ConsoleUtils
     {
-        void MyConsoleTextAttribute::SetForeGroundColor(Color color)
+        void ConsoleTextAttribute::SetForeGroundColor(Color color)
         {
             _textAttribute &= _invertedForeGroundColorMask;
             _textAttribute += color;
         }
-        MyConsoleTextAttribute::Color MyConsoleTextAttribute::GetForeGroundColor()
+        ConsoleTextAttribute::Color ConsoleTextAttribute::GetForeGroundColor()
         {
             return (Color)(_textAttribute & _foreGroundColorMask);
         }
-        void MyConsoleTextAttribute::SetBackGroundColor(Color color)
+        void ConsoleTextAttribute::SetBackGroundColor(Color color)
         {
             _textAttribute &= _invertedBackGroundColorMask;
             _textAttribute += color << 4;
         }
-        MyConsoleTextAttribute::Color MyConsoleTextAttribute::GetBackGroundColor()
+        ConsoleTextAttribute::Color ConsoleTextAttribute::GetBackGroundColor()
         {
             return (Color)(_textAttribute & _backGroundColorMask);
         }
 
-        void MyConsoleTextAttribute::SetFG(Color color)
+        void ConsoleTextAttribute::SetFG(Color color)
         {
             SetForeGroundColor(color);
         }
-        MyConsoleTextAttribute::Color MyConsoleTextAttribute::GetFG(Color)
+        ConsoleTextAttribute::Color ConsoleTextAttribute::GetFG(Color)
         {
             return GetForeGroundColor();
         }
-        void MyConsoleTextAttribute::SetBG(Color color)
+        void ConsoleTextAttribute::SetBG(Color color)
         {
             SetBackGroundColor(color);
         }
-        MyConsoleTextAttribute::Color MyConsoleTextAttribute::GetBG(Color)
+        ConsoleTextAttribute::Color ConsoleTextAttribute::GetBG(Color)
         {
             return GetBackGroundColor();
         }
 
-        void MyConsoleTextAttribute::SetTopEdge(bool enabled)
+        void ConsoleTextAttribute::SetTopEdge(bool enabled)
         {
             _textAttribute &= _invertedTopEdgeMask;
             if (enabled)
                 _textAttribute += _topEdgeMask;
         }
-        bool MyConsoleTextAttribute::GetTopEdge()
+        bool ConsoleTextAttribute::GetTopEdge()
         {
             return (_textAttribute & _topEdgeMask) != 0;
         }
-        void MyConsoleTextAttribute::SetBottomEdge(bool enabled)
+        void ConsoleTextAttribute::SetBottomEdge(bool enabled)
         {
             _textAttribute &= _invertedBottomEdgeMask;
             if (enabled)
                 _textAttribute += _bottomEdgeMask;
         }
-        bool MyConsoleTextAttribute::GetBottomEdge()
+        bool ConsoleTextAttribute::GetBottomEdge()
         {
             return (_textAttribute & _bottomEdgeMask) != 0;
         }
-        void MyConsoleTextAttribute::SetRightEdge(bool enabled)
+        void ConsoleTextAttribute::SetRightEdge(bool enabled)
         {
             _textAttribute &= _invertedTopEdgeMask;
             if (enabled)
                 _textAttribute += _topEdgeMask;
         }
-        bool MyConsoleTextAttribute::GetRightEdge()
+        bool ConsoleTextAttribute::GetRightEdge()
         {
             return (_textAttribute & _rightEdgeMask) != 0;
         }
-        void MyConsoleTextAttribute::SetLeftEdge(bool enabled)
+        void ConsoleTextAttribute::SetLeftEdge(bool enabled)
         {
             _textAttribute &= _invertedLeftEdgeMask;
             if (enabled)
                 _textAttribute += _leftEdgeMask;
         }
-        bool MyConsoleTextAttribute::GetLeftEdge()
+        bool ConsoleTextAttribute::GetLeftEdge()
         {
             return (_textAttribute & _leftEdgeMask) != 0;
         }
 
-        void MyConsoleTextAttribute::SetInvertColors(bool enabled)
+        void ConsoleTextAttribute::SetInvertColors(bool enabled)
         {
             _textAttribute &= _invertedInvertColorsMask;
             if (enabled)
                 _textAttribute += _invertColorsMask;
         }
-        bool MyConsoleTextAttribute::GetInvertColors()
+        bool ConsoleTextAttribute::GetInvertColors()
         {
             return (_textAttribute & _invertColorsMask) != 0;
         }
 
-        void MyConsoleTextAttribute::Reset()
+        void ConsoleTextAttribute::Reset()
         {
             _textAttribute = _standard;
         }
 
-        void MyConsoleTextAttribute::Apply()
+        void ConsoleTextAttribute::Apply()
         {
             HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);//this NEEDS to be optimized. i want to store it statically or something like that, so i don't have to get it every Apply()
             SetConsoleTextAttribute(handle, _textAttribute);

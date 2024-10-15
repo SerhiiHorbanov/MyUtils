@@ -1,11 +1,11 @@
 #include <string>
 #include "MyVector2.h"
 #include "MyVector3.h"
-#include "MyDistanceCalculation.h"
+#include "DistanceCalculation.h"
 
-namespace MyUtils
+namespace My
 {
-    namespace MyMath
+    namespace Math
     {
         template <typename T>
         std::string MyVector2<T>::ToString()

@@ -1,11 +1,11 @@
 #pragma once
 #include <Windows.h>
 
-namespace MyUtils
+namespace My
 {
-    namespace MyConsoleUtils
+    namespace ConsoleUtils
     {
-        struct MyConsoleTextAttribute
+        struct ConsoleTextAttribute
         {
         public:
             enum Color : char
@@ -30,7 +30,7 @@ namespace MyUtils
                 White = 15,         //1111
             };
 
-            MyConsoleTextAttribute
+            ConsoleTextAttribute
             (
                 Color foreGroundColor = LightGray, Color backGroundColor = Black, 
                 bool topEdge = false, bool bottomEdge = false, bool rightEdge = false, bool leftEdge = false, 

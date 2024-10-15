@@ -4,21 +4,17 @@
 
 namespace MyUtils
 {
-    template <class... CallBackArguments>
+    template <typename... CallBackArguments>
     struct Observable
     {
     public:
-        std::vector<std::function<void(CallBackArguments...)>> callbacks;
+        using Callback = std::function<void(CallBackArguments...)>;
+        
+        std::vector<Callback> callbacks;
         
         void Notify(CallBackArguments... args);
         void operator ()(CallBackArguments... args);
 
-        void AddObserver(std::function<void(CallBackArguments...)> newObserver);
+        void AddObserver(Callback newObserver);
     };
-
-    template <typename CallBackArguments>
-    void operator +=(Observable<CallBackArguments>& observable, std::function<void(CallBackArguments)> newObserver)
-    {
-        observable.AddObserver(newObserver);
-    }
 }

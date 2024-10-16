@@ -131,9 +131,6 @@
     <ClInclude Include="ArrayToTextSerialization.h" />
     <ClInclude Include="CollectionToTextSerialization.h" />
     <ClInclude Include="Constants.h" />
-    <ClInclude Include="IFloatSerializable.h" />
-    <ClInclude Include="IIntSerializable.h" />
-    <ClInclude Include="IStringSerializable.h" />
     <ClInclude Include="DegreesAndRadiansConversion.h" />
     <ClInclude Include="Easings.h" />
     <ClInclude Include="ConsoleTextAttribute.h" />
